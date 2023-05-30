@@ -1,0 +1,108 @@
+
+/* Headerbar */
+
+headerbar { min-height: 0; }
+headerbar box { border-spacing: 0 0; }
+headerbar tab button.image-button {
+  min-height: 16px;
+  min-width: 16px;
+  padding: 4px;
+}
+headerbar tabbar > revealer > box {
+  box-shadow: none;
+}
+
+
+/* Command Palette */
+
+.command-searcher entry.search {
+  border-radius: 12px 12px 0 0;
+  padding: 6px 12px;
+}
+.command-list .command-item { padding: 10px 12px; }
+.command-list image { margin-right: 12px; }
+
+.command-list > :not(:last-child) {
+  border-bottom: 1px dashed @borders;
+}
+
+
+/* Editor */
+
+.file-editor {
+  background: @view_bg_color;
+}
+
+.file-editor .header .keywords {
+  margin-top: .35em;
+}
+
+.file-editor .header .keywords .keyword-chip {
+  color: @accent_color;
+}
+
+.file-editor .header .keywords :not(:last-child) .keyword-chip {
+  margin-right: .7em;
+  padding-right: 0;
+  border-right: 1px solid @borders;
+}
+.file-editor .header .keywords .keyword-chip button {
+  padding: 0;
+  min-width: 18px;
+  min-height: 18px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-left: 0;
+  border-radius: 50%;
+}
+.file-editor .header .keywords .keyword-chip:not(:hover) button {
+  color: transparent;
+}
+.file-editor .header .keywords .keyword-chip button:not(:hover) {
+  background: none;
+}
+
+.file-editor .header .keywords .add-button {
+  padding: 0;
+}
+.file-editor .header .keywords .add-button:not(:hover) {
+  background: 0;
+  color: alpha(@window_fg_color, 0.5);
+}
+
+.text-editor > * {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.text-editor > .header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed @borders;
+  margin-bottom: .3rem;
+  background: @window_bg_color;
+}
+
+.text-editor > text:not(.header) {
+  padding-top: 1rem;
+  padding-bottom: .3rem;
+}
+
+.text-editor > textview:not(.header) {
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+}
+
+.text-editor textview {
+  background: none;
+}
+
+.text-editor > .title-1 { font-size: 1.5rem; }
+.text-editor > .title-2 { font-size: 1.3rem; }
+.text-editor > .title-3 { font-size: 1.2rem; }
+.text-editor > .title-4 { font-size: 1.1em; }
+
+.text-editor > text > placeholder {
+  opacity: 0.5;
+  font-weight: 400;
+}
